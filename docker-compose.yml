@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  icecastsrv:
+    build: .
+    restart: unless-stopped
+    container_name: icecastsrv
+    ports:
+     - 8000:8000
+    volumes:
+     - ./etc/icecast2/:/etc/icecast2/icecast2.xml
