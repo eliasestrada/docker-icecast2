@@ -1,5 +1,9 @@
-install:
-  - curl -sLo - http://j.mp/install-travis-docker | sh -xe
-
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t icecast2 .
+  - docker run --name icecast2srv -d -p 8000:8000 icecast2
 script:
-  - ./run 'docker build -t w3spi5/docker-icecast2 . && docker run w3spi5/docker-icecast2 echo Build succeed'
+  - docker ps -a
+  - docker exec -it icecast2srv cat /etc/icecast2/icecast.xml
