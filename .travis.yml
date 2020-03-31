@@ -1,0 +1,5 @@
+install:
+  - curl -sLo - http://j.mp/install-travis-docker | sh -xe
+
+script:
+  - ./run 'docker build -t w3spi5/docker-icecast2 . && docker run w3spi5/docker-icecast2 echo Build succeed'

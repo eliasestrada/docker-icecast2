@@ -1,6 +1,8 @@
-# Icecast2 in Docker
+# Icecast2 in Docker [![Build Status](https://travis-ci.com/w3spi5/docker-icecast2.svg?branch=master)](https://travis-ci.com/w3spi5/docker-icecast2)
 
 This package is the result of my research to operate Icecast2 in a Docker container.
+
+[![](http://dockeri.co/image/w3spi5/icecast2)](https://index.docker.io/u/w3spi5/icecast2/)
 
 ## Run
 
@@ -19,9 +21,14 @@ Also, you should be able to access the bash of the docker using
 
     docker exec -ti icecastsrv bash
 
-## Credits - Inspiration
-[moul](https://github.com/moul/docker-icecast)'s Icecast with docker-compose and Dockerfile
+## !! Put your own configuration !!
 
+You will find the file `etc/icecast2/icecast.xml`, available in this project.  
+This is the essential file part that wasn't found on any existing projects.
+
+## Credits - Inspiration
+
+[moul](https://github.com/moul/docker-icecast)'s Icecast with docker-compose and Dockerfile.  
 [24hourkirtan](https://github.com/24hourkirtan/docker-icecast)'s Icecast with Dockerfile
 
 ## License

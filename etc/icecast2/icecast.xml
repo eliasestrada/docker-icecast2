@@ -153,8 +153,8 @@
         <burst-size>65536</burst-size>
         <hidden>0</hidden>
         <public>1</public>
-        <on-connect>/home/icecast/bin/stream-start</on-connect>
-        <on-disconnect>/home/icecast/bin/stream-stop</on-disconnect>
+        <!--<on-connect>/home/icecast/bin/stream-start</on-connect>-->
+        <!--<on-disconnect>/home/icecast/bin/stream-stop</on-disconnect>-->
     </mount>
     
 
